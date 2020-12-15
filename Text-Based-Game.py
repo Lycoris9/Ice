@@ -101,6 +101,7 @@ def investigate():
                                     print("The guards give you a little wink and let you pass.")
                                     guards = "Yes"
                                     counter += 1
+                            bribe = "None"
                         else:
                             print("As you attempt to approach the crime scene, the village guards block your path.")
                             time.sleep(1)
@@ -131,6 +132,7 @@ def investigate():
                                                 inventory.append("Weapon")
                                                 weaponownership = "Yes"
                                                 counter += 1
+                                        weapon = "None"
                                     elif weaponownership == "Yes":
                                         print("You notice a large, gaping hole.")
                             useinfo = "None"
@@ -146,6 +148,7 @@ def investigate():
                                         inventory.append("Weapon")
                                         weaponownership = "Yes"
                                         counter += 1
+                                weapon = "None"
                             elif weaponownership == "Yes":
                                 print("You notice a large, gaping hole.")
                 elif area == "Outskirts":
@@ -163,6 +166,8 @@ def investigate():
                                 inventory.append("Money")
                                 counter += 1
                                 print("Score: {}".format(counter))
+                        if purse == "No":
+                            purse = "None"
                     else:  
                         print("There's nothing but the endless sea of ice.")
                 elif area == "Tavern":
@@ -237,6 +242,7 @@ def investigate():
                                             inventory.append("Weapon")
                                             weaponownership = "Yes"
                                             counter += 1
+                                weapon = "None"
                                 elif weaponownership == "Yes":
                                     print("You notice a large, gaping hole.")
                     else:
@@ -251,6 +257,7 @@ def investigate():
                                     inventory.append("Weapon")
                                     weaponownership = "Yes"
                                     counter += 1
+                            weapon = "None"
                         elif weaponownership == "Yes":
                             print("You notice a large, gaping hole.")
                     useinfo = "None"
@@ -269,6 +276,8 @@ def investigate():
                                 inventory.append("Money")
                                 counter += 1
                                 print("Score: {}".format(counter))
+                        if purse == "No":
+                            purse = "None"
                     else:  
                         print("There's nothing but the endless sea of ice.")
                 elif area == "Tavern":
@@ -292,6 +301,7 @@ def investigate():
                                     counter += 1
                                 elif bribe == "No":
                                     print("You leave the tavern.")
+                            bribe = "None"
                         else:
                             print("You're flat broke, so you leave.")
                 if solved == "True":
